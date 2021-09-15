@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="gearbox/gearbox_intro.html"><strong aria-hidden="true">2.</strong> 3D Printed Gearbox</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -150,6 +150,42 @@ I use this place to store documentation about my current progress on the project
 and my future plans for these projects. My interests are on mechanical design,
 3D printing, and programming so most of the projects I will show here are related
 with these interests.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="3d-printed-gearbox"><a class="header" href="#3d-printed-gearbox">3D Printed Gearbox</a></h1>
+<p>This is one of my longest-lived projects and I am still working on it.
+The main purpose of this project is to design and 3D print a gearbox for a robot.
+The main reasons why I decided to work on this project were that I couldn't afford to buy a gearbox for the motors I was using and that I wanted to learn more about 3D printing small mechanisms.
+I chose to design a planetary gearbox since it naturally keeps the gears aligned and can achieve large reduction ratios in small packages.</p>
+<p>The main constraint on the design of the gearbox was its overall size: the largest allowed size of the gearbox was about <em>100mm x 60mm x 60mm</em> (about the size of a fist).
+This meant that the individual gears should be rather small because the overall size of the gearbox also includes the housing and mounting points for the gearbox.
+At the end, the individual planet gears resulted smaller than <em>10mm</em> in diameter with teeth about <em>0.5mm</em> in width.
+These small sizes were hard to 3D print because the smallest feature my 3D printer is able to produce is about <em>0.3mm</em>.
+Small print errors were enough to make the gears unusable.</p>
+<p>I ended doing many iterations in order to get the parameters of the gears and of my 3D printer right.
+However, at the end I was able to create a working gearbox which worked perfectly with my robot.</p>
+<p>This is a computer model of the gearbox.
+It only contains the internal components of the gear (the housing is not shown).
+<img src="gearbox/./images/Gearbox6.png" alt="Image" /></p>
+<p>This table contains the main components of the gearbox:</p>
+<table><thead><tr><th>Name</th><th>Image</th></tr></thead><tbody>
+<tr><td>Planet Gear</td><td><img src="gearbox/./images/Planet.png" alt="Image" /></td></tr>
+<tr><td>Sun Gear</td><td><img src="gearbox/./images/Sun.png" alt="Image" /></td></tr>
+<tr><td>Ring Gear</td><td><img src="gearbox/./images/Ring.png" alt="Image" /></td></tr>
+<tr><td>Carrier</td><td><img src="gearbox/./images/Carrier.png" alt="Image" /></td></tr>
+</tbody></table>
+<!-- TODO: Talk about chamfers on gear teeth in order to improve meshing by reducing printing errors -->
+<p>And these are pictures of the current status of the actual 3D printed gearbox.
+In order to reduce noise and friction between the individual gears I used white lithium grease to lubricate the gears.
+In the lower stages (the ones closer to the motor) the grease is not that effective since the gears are moving too fast.
+However, in the higher stages (the stages closer to the output of the gearbox) the grease is quite effective.
+Lubrication is another problem that I plan to fix in future versions of the gearbox.</p>
+<table><thead><tr><th>Name</th><th>Image</th></tr></thead><tbody>
+<tr><td>Printed Gearbox with enclosure</td><td><img src="gearbox/./images/PrintedGearbox.jpg" alt="Image" /></td></tr>
+<tr><td>Stages of the gearbox</td><td><img src="gearbox/./images/PrintedGearFront2.jpg" alt="Image" /></td></tr>
+<tr><td>Stages and enclosure fit</td><td><img src="gearbox/./images/PrintedGearFit.jpg" alt="Image" /></td></tr>
+<tr><td>Output stage of the gearbox</td><td><img src="gearbox/./images/PrintedGearFront1.jpg" alt="Image" /></td></tr>
+</tbody></table>
+<!-- TODO: Add more stuff about the printed gearbox-->
+<!-- TODO: Add videos of the robot working with the printed gearbox-->
 
                     </main>
 
